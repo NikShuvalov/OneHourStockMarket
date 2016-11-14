@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="shuvalov.nikita.onehourchallenge.MainActivity">
+
+    <TextView
+        android:id="@+id/stock_ticker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THIS IS WHERE THE PRICE GOES"/>
+
+    <TextView
+        android:id="@+id/portfolio_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/stock_ticker"/>
+
+    <TextView
+        android:id="@+id/time_left_container"
+        android:layout_below="@id/stock_ticker"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buy_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purchase"
+        android:layout_below="@id/portfolio_view"/>
+    <Button
+        android:id="@+id/sell_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/portfolio_view"
+        android:layout_alignParentRight="true"
+        android:text="Sell"/>
+
+    <EditText
+        android:id="@+id/user_amount_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/portfolio_view"
+        android:layout_toRightOf="@id/buy_button"
+        android:layout_toLeftOf="@id/sell_button"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/restart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart game"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
